@@ -1,6 +1,5 @@
 import sys
 
-#sys.setrecursionlimit(999999)
 
 def fib(n):
     if n == 1:
