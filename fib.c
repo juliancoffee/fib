@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
     int64_t n;
     n = atoi(argv[1]);
 
-    printf("res = %d\n", fib(n));
+    printf("res = %li\n", fib(n));
     
     return 0;
 
