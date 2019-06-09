@@ -19,5 +19,8 @@ func main() {
     getnum := os.Args[1]
     n, err := strconv.Atoi(getnum)
     fmt.Println(fib(n))
-    fmt.Println(err)
+
+    if (err != nil) {
+        fmt.Println(err)
+    }
 }
