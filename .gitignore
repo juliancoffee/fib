@@ -1,0 +1,13 @@
+#ignore all
+*
+
+#unignore go, c, python, rust code
+!*.go
+!*.c
+!*.python
+!*.rs
+
+#unignore gitignore
+!.gitignore
+
+

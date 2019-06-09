@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdint.h>
 
-int fib(int n);
+int fib(int64_t n);
 
 int main(int argc, char *argv[]) {
 
-    int n;
+    int64_t n;
     n = atoi(argv[1]);
 
     printf("res = %d\n", fib(n));
@@ -15,7 +16,7 @@ int main(int argc, char *argv[]) {
 
 }
 
-int fib(int n) {
+int fib(int64_t n) {
     if (n == 1) {
         return 1;
     }
