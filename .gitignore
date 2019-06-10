@@ -6,7 +6,7 @@
 #unignore go, c, python, rust code
 !*.go
 !*.c
-!*.python
+!*.py
 !*.rs
 !*.jl
 
