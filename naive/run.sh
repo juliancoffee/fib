@@ -9,3 +9,5 @@ printf "\n Python $1\n"
 time pypy3 fib.py $1
 printf "\n Julia $1\n"
 time julia fib.jl $1
+printf "\n JS $1\n"
+time node ./fib.js $1

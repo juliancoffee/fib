@@ -9,6 +9,7 @@
 !*.py
 !*.rs
 !*.jl
+!*.js
 
 #unignore gitignore, makefile, script to run
 !.gitignore
