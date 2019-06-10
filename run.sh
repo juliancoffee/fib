@@ -7,3 +7,5 @@ printf "\n Rust $1\n"
 time ./fibrs $1
 printf "\n Python $1\n"
 time pypy fib.py $1
+printf "\n Julia $1\n"
+time julia fib.jl $1
