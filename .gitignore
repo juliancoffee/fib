@@ -6,6 +6,7 @@
 !*.c
 !*.python
 !*.rs
+!*.jl
 
 #unignore gitignore, makefile, script to run
 !.gitignore
