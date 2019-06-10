@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 printf "\n C $1\n"
 time ./fibc $1
 printf "\n Go $1\n"
