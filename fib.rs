@@ -5,7 +5,7 @@ fn fib(n: i64) -> i64 {
         return 1;
     }
     if n == 2 {
-        return 2;
+        return 1;
     }
 
     return fib(n-1) + fib(n-2);
@@ -20,6 +20,6 @@ fn main() {
 
     let res: i64 = fib(n);
 
-    println!("{}", res);
+    println!("res {}", res);
 
 }

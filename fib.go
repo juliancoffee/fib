@@ -9,7 +9,7 @@ func fib(n int) int {
         return 1
     }
     if (n == 2) {
-        return 2
+        return 1
     }
 
     return fib(n-1) + fib(n-2)
@@ -18,7 +18,7 @@ func fib(n int) int {
 func main() {
     getnum := os.Args[1]
     n, err := strconv.Atoi(getnum)
-    fmt.Println(fib(n))
+    fmt.Println("res = ", fib(n))
 
     if (err != nil) {
         fmt.Println(err)

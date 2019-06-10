@@ -7,7 +7,8 @@
 !*.python
 !*.rs
 
-#unignore gitignore
+#unignore gitignore, makefile, script to run
 !.gitignore
-
+!makefile
+!run.sh
 

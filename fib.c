@@ -21,7 +21,7 @@ int fib(int64_t n) {
         return 1;
     }
     if (n == 2) {
-        return 2;
+        return 1;
     }
 
     return fib(n-1) + fib(n-2);
