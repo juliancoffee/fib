@@ -9,7 +9,7 @@
           (nth (- n 1) (cdr ls)))))
 
 (define (fib n)
-  (if (or (= n 1) (= n 2))
+  (if (< n 3)
       1
       (+ 
         (fib (- n 1)) 
