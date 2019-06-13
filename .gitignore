@@ -11,6 +11,7 @@
 !*.jl
 !*.js
 !*.java
+!*.nim
 
 #unignore gitignore, makefile, script to run
 !.gitignore
