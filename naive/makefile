@@ -13,7 +13,7 @@ java: fib.java
 	javac fib.java
 
 nim: fib.nim
-	nim c -d:release main.nim -o:fibnim
+	nim c -d:release -o:fibnim fib.nim
 	rm -rf nimcache
 
 clean:
