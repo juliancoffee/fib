@@ -14,3 +14,5 @@ printf "\n JS $1\n"
 time node ./fib.js $1
 printf "\n Java $1\n"
 time java fib $1
+printf "\n Nim $1\n"
+time ./fibnim $1

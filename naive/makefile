@@ -1,4 +1,4 @@
-all: c go rust java
+all: c go rust java nim
 
 c: fib.c
 	gcc fib.c -O2 -o fibc
@@ -12,5 +12,9 @@ go: fib.go
 java: fib.java
 	javac fib.java
 
+nim: fib.nim
+	nim c -d:release -o:fibnim fib.nim
+	rm -rf nimcache
+
 clean:
-	rm -f fibc fibgo fibrs fib.class
+	rm -f fibc fibgo fibrs fib.class fibnim
