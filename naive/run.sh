@@ -12,3 +12,5 @@ printf "\n Julia $1\n"
 time julia fib.jl $1
 printf "\n JS $1\n"
 time node ./fib.js $1
+printf "\n Java $1\n"
+time java fib $1
