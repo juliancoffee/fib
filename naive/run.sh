@@ -16,3 +16,5 @@ printf "\n Java $1\n"
 time java fib $1
 printf "\n Nim $1\n"
 time ./fibnim $1
+printf "\n Scheme $1\n"
+time echo "$1" | ./fibscm
