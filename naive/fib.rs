@@ -1,10 +1,7 @@
 use std::env;
 
 fn fib(n: i64) -> i64 {
-    if n == 1 {
-        return 1;
-    }
-    if n == 2 {
+    if n < 3 {
         return 1;
     }
 

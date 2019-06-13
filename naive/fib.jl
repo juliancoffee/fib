@@ -1,9 +1,5 @@
 function fib(n)
-    if n == 1
-        return 1
-    end
-
-    if n == 2
+    if n < 3
         return 1
     end
 
