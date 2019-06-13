@@ -1,7 +1,7 @@
 all: c go rust java nim scheme
 
 c: fib.c
-	gcc fib.c -O2 -o fibc
+	clang fib.c -O2 -o fibc
 
 rust: fib.rs
 	rustc fib.rs -O -o fibrs
