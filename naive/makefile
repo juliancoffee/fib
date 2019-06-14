@@ -21,7 +21,7 @@ scheme: src/fib.scm
 
 pascal: src/fib.pas
 	fpc -O4 -CX -XX -Xs src/fib.pas -o./fibpas
-	rm -rf src/fib.o
+	rm -rf ./fib.o
 
 clean:
 	rm -f fibc fibgo fibrs "fib.class" fibnim fibscm fibpas
