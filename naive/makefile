@@ -1,23 +1,23 @@
 all: c go rust java nim scheme
 
-c: fib.c
-	clang fib.c -O2 -o fibc
+c: src/fib.c
+	clang src/fib.c -O2 -o fibc
 
-rust: fib.rs
-	rustc fib.rs -O -o fibrs
+rust: src/fib.rs
+	rustc src/fib.rs -O -o fibrs
 
-go: fib.go
-	go build -o fibgo fib.go
+go: src/fib.go
+	go build -o fibgo src/fib.go
 
-java: fib.java
-	javac fib.java
+java: src/fib.java
+	javac src/fib.java -d .
 
-nim: fib.nim
-	nim c -d:release -o:fibnim fib.nim
-	rm -rf nimcache
+nim: src/fib.nim
+	nim c -d:release -o:fibnim src/fib.nim
+	rm -rf src/nimcache
 
-scheme: fib.scm
-	chicken-csc fib.scm -o fibscm
+scheme: src/fib.scm
+	chicken-csc src/fib.scm -o fibscm
 
 clean:
 	rm -f fibc fibgo fibrs "fib.class" fibnim fibscm
