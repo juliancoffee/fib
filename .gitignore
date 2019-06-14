@@ -3,7 +3,7 @@
 #unignore fir
 !*/
 
-#unignore go, c, python, rust, julia, javascript, java code
+#unignore go, c, python, rust, julia, javascript, java, nim, scheme, pascal code
 !*.go
 !*.c
 !*.py
@@ -13,6 +13,7 @@
 !*.java
 !*.nim
 !*.scm
+!*.pas
 
 #unignore gitignore, makefile, script to run
 !.gitignore

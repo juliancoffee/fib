@@ -18,3 +18,5 @@ printf "\n Nim $1\n"
 time ./fibnim $1
 printf "\n Scheme $1\n"
 time echo "$1" | ./fibscm
+printf "\n Pascal $1\n"
+time ./fibpas $1
