@@ -2,11 +2,11 @@ import sys
 
 
 def fib(n):
-    def fibtail(n, second, first, res):
-        if n == 1:
-            return res
-        return fibtail(n - 1, first, res, first + res)
-    return fibtail(n, 0, 0, 1)
+    def fibtail(n, second, first):
+        if n < 3:
+            return first + second
+        return fibtail(n - 1, first, first + second)
+    return fibtail(n, 0, 1)
 
 if __name__ == '__main__':
     limit = 1000000000
