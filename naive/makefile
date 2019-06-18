@@ -24,7 +24,7 @@ pascal: src/fib.pas
 	rm -rf ./fib.o
 
 haskell: src/fib.hs
-	ghc -O src/fib.hs -o fibhs
+	ghc -O -fllvm src/fib.hs -o fibhs
 	rm -f src/{fib.hi,fib.o}
 
 clean:

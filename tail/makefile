@@ -7,7 +7,7 @@ scheme: src/fib_tail.scm
 	chicken-csc src/fib_tail.scm -o fib_tail_scm
 
 haskell: src/fib_tail.hs
-	ghc -O src/fib_tail.hs -o fib_tail_hs
+	ghc -O -fllvm src/fib_tail.hs -o fib_tail_hs
 	rm -r src/{fib_tail.hi,fib_tail.o}
 
 clean:
