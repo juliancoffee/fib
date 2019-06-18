@@ -20,3 +20,5 @@ printf "\n Scheme $1\n"
 time echo "$1" | ./fibscm
 printf "\n Pascal $1\n"
 time ./fibpas $1
+printf "\n Haskell $1\n"
+time ./fibhs $1
