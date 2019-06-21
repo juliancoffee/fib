@@ -15,6 +15,7 @@
 !*.scm
 !*.pas
 !*.hs
+!*.clj
 
 #unignore gitignore, makefile, script to run
 !.gitignore

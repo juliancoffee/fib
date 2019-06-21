@@ -1,7 +1,7 @@
 all: c go rust java nim scheme pascal haskell
 
 c: src/fib.c
-	clang src/fib.c -O2 -o fibc
+	clang src/fib.c -O3 -o fibc
 
 rust: src/fib.rs
 	rustc src/fib.rs -O -o fibrs
