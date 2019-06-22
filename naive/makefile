@@ -1,4 +1,4 @@
-all: c go rust java nim scheme pascal haskell
+all: c go rust java nim scheme pascal haskell v
 
 c: src/fib.c
 	clang src/fib.c -O3 -o fibc
@@ -27,5 +27,8 @@ haskell: src/fib.hs
 	ghc -O -fllvm src/fib.hs -o fibhs
 	rm -f src/{fib.hi,fib.o}
 
+v: src/fib.v
+	v -o fibv src/fib.v
+
 clean:
-	rm -f fibc fibgo fibrs "fib.class" fibnim fibscm fibpas fibhs
+	rm -f fibc fibgo fibrs "fib.class" fibnim fibscm fibpas fibhs fibv
