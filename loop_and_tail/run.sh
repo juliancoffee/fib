@@ -2,6 +2,8 @@
 
 #printf "\n Go tail $1\n"
 #time ./fib_tail_go $1
+printf "\n Go loop $1\n"
+time ./fib_loop_go $1
 #printf "\n Sheme tail $1\n"
 #time echo "$1" | ./fib_tail_scm
 #printf "\n Clojure tail $1\n"
