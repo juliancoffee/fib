@@ -18,8 +18,9 @@
 !*.clj
 !*.v
 
-#unignore gitignore, makefile, script to run
+#unignore gitignore, gitattributes, makefile, script to run
 !.gitignore
+!.gitattributes
 !makefile
 !run.sh
 
