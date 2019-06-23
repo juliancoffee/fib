@@ -1,19 +1,27 @@
 import sys
+import math
 
 
 def fib(n):
     A = [[1, 1], [1, 0]]
-    R = m_power(A, n)
-    res = R[1][1]
+    R = m_power(A, n - 1)
+    res = R[0][0]
     return res
 
 
 def m_power(A, n):
-    Step = list(A)
-    for i in range(n):
-        A = m_mult(A, Step)
+    if n == 1:
+        return A
+    if n == 0:
+        return [[1, 0], [0, 1]]
+#TODO note that isn't universal solution for matrix exponentiation
 
-    return A
+    x = int(math.log(n, 2))
+    acuum = list(A)
+    for i in range(x):
+        acuum = m_mult(acuum, acuum)
+
+    return m_mult(acuum, m_power(A, n - 2**x))
 
 
 def m_mult(A, B):
