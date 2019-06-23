@@ -28,7 +28,7 @@ haskell: src/fib.hs
 	rm -f src/{fib.hi,fib.o}
 
 v: src/fib.v
-	v -o fibv src/fib.v
+	v -prod -o fibv src/fib.v
 
 clean:
 	rm -f fibc fibgo fibrs "fib.class" fibnim fibscm fibpas fibhs fibv
