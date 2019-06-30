@@ -31,7 +31,7 @@ v: src/fib.v
 	v -prod -o fibv src/fib.v
 
 zig: src/fib.zig
-	zig build-exe --strip --release-fast --name fibzig src/main.zig
+	zig build-exe --strip --release-fast --name fibzig src/fib.zig
 	rm -f main.o
 
 clean:
