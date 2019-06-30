@@ -11,5 +11,8 @@ haskell: src/fib_tail.hs
 	ghc -O -fllvm src/fib_tail.hs -o fib_tail_hs
 	rm -r src/{fib_tail.hi,fib_tail.o}
 
+zig: src/fib_tail.zig
+	zig build-exe --strip --release-fast --name fib_tail_zig src/fib_tail.zig
+
 clean:
-	rm -f fib_tail_scm fib_tail_go fib_loop_go fib_tail_hs
+	rm -f fib_tail_scm fib_tail_go fib_loop_go fib_tail_hs fib_tail_zig

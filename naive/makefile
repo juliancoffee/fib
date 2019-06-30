@@ -30,5 +30,9 @@ haskell: src/fib.hs
 v: src/fib.v
 	v -prod -o fibv src/fib.v
 
+zig: src/fib.zig
+	zig build-exe --strip --release-fast --name fibzig src/fib.zig
+	rm -f main.o
+
 clean:
-	rm -f fibc fibgo fibrs "fib.class" fibnim fibscm fibpas fibhs fibv
+	rm -f fibc fibgo fibrs "fib.class" fibnim fibscm fibpas fibhs fibv fibzig
