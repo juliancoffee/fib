@@ -1,4 +1,4 @@
-all: go scheme haskell
+all: go scheme haskell zig
 
 go: src/fib_tail.go
 	go build -o fib_tail_go src/fib_tail.go
@@ -13,6 +13,7 @@ haskell: src/fib_tail.hs
 
 zig: src/fib_tail.zig
 	zig build-exe --strip --release-fast --name fib_tail_zig src/fib_tail.zig
+	rm -f main.o fib_tail_zig.o
 
 clean:
 	rm -f fib_tail_scm fib_tail_go fib_loop_go fib_tail_hs fib_tail_zig
