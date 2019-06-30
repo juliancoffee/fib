@@ -14,3 +14,5 @@ time ./fib_tail_hs $1
 #time python3 src/fib_tail.py $1
 #printf "\n Python3 (pypy) tail $1\n"
 #time pypy3 src/fib_tail.py $1
+printf "\n Zig tail $1\n"
+time ./fib_tail_zig $1

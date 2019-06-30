@@ -26,3 +26,5 @@ printf "\n Haskell $1\n"
 time ./fibhs $1
 printf "\n V $1\n"
 time ./fibv $1
+printf "\n Zig $1\n"
+time ./fibzig $1
