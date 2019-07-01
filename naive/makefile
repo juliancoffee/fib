@@ -1,41 +1,44 @@
-all: c go rust java nim scheme pascal haskell v zig erl
+all: fibc fibgo fibrs fib.class fibnim fibscm fibpas fibhs fibv fibzig fib.beam fibml
 
-c: src/fib.c
+fibc: src/fib.c
 	clang src/fib.c -O3 -o fibc
 
-rust: src/fib.rs
+fibrs: src/fib.rs
 	rustc src/fib.rs -O -o fibrs
 
-go: src/fib.go
+fibgo: src/fib.go
 	go build -o fibgo src/fib.go
 
-java: src/fib.java
+fib.class: src/fib.java
 	javac src/fib.java -d .
 
-nim: src/fib.nim
+fibnim: src/fib.nim
 	nim c -d:release -o:fibnim src/fib.nim
 	rm -rf src/nimcache
 
-scheme: src/fib.scm
+fibscm: src/fib.scm
 	chicken-csc src/fib.scm -o fibscm
 
-pascal: src/fib.pas
+fibpas: src/fib.pas
 	fpc -O4 -CX -XX -Xs src/fib.pas -o./fibpas
 	rm -rf ./fib.o
 
-haskell: src/fib.hs
+fibhs: src/fib.hs
 	ghc -O -fllvm src/fib.hs -o fibhs
 	rm -f src/{fib.hi,fib.o}
 
-v: src/fib.v
+fibv: src/fib.v
 	v -prod -o fibv src/fib.v
 
-zig: src/fib.zig
+fibzig: src/fib.zig
 	zig build-exe --strip --release-fast --name fibzig src/fib.zig
 	rm -f main.o fibzig.o
 
-erl: src/fib.erl
+fib.beam: src/fib.erl
 	erlc src/fib.erl
 
+fibml: src/fib.ml
+	ocamlopt -o fibml src/fib.ml
+
 clean:
-	rm -f fibc fibgo fibrs "fib.class" "fib.beam" fibnim fibscm fibpas fibhs fibv fibzig
+	rm -f fibc fibgo fibrs "fib.class" "fib.beam" fibnim fibscm fibpas fibhs fibv fibzig fibml

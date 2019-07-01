@@ -19,6 +19,7 @@
 !*.v
 !*.zig
 !*.erl
+!*.ml
 
 #unignore gitignore, gitattributes, makefile, script to run
 !.gitignore
