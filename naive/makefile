@@ -1,4 +1,4 @@
-all: fibc fibgo fibrs fib.class fibnim fibscm fibpas fibhs fibv fibzig fib.beam fibml
+all: fibc fibgo fibrs fib.class fibnim fibscm fibpas fibhs fibzig fib.beam fibml
 
 fibc: src/fib.c
 	clang src/fib.c -O3 -o fibc
@@ -27,9 +27,6 @@ fibhs: src/fib.hs
 	ghc -O -fllvm src/fib.hs -o fibhs
 	rm -f src/{fib.hi,fib.o}
 
-fibv: src/fib.v
-	v -prod -o fibv src/fib.v
-
 fibzig: src/fib.zig
 	zig build-exe --strip --release-fast --name fibzig src/fib.zig
 	rm -f main.o fibzig.o
@@ -39,6 +36,7 @@ fib.beam: src/fib.erl
 
 fibml: src/fib.ml
 	ocamlopt -o fibml src/fib.ml
+	rm -f src/{fib.cmi,fib.cmx,fib.o}
 
 clean:
-	rm -f fibc fibgo fibrs "fib.class" "fib.beam" fibnim fibscm fibpas fibhs fibv fibzig fibml
+	rm -f fibc fibgo fibrs "fib.class" "fib.beam" fibnim fibscm fibpas fibhs fibzig fibml
