@@ -20,6 +20,7 @@
 !*.zig
 !*.erl
 !*.ml
+!*.adb
 
 #unignore gitignore, gitattributes, makefile, script to run
 !.gitignore

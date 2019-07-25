@@ -1,10 +1,10 @@
-all: fibc fibgo fibrs fib.class fibnim fibscm fibpas fibhs fibzig fib.beam fibml
+all: fibc fibgo fibrs fib.class fibnim fibscm fibpas fibhs fibzig fib.beam fibml fibada
 
 fibc: src/fib.c
 	clang src/fib.c -O3 -o fibc
 
 fibrs: src/fib.rs
-	rustc src/fib.rs -O -o fibrs
+	rustc src/fib.rs -C opt-level=s -o fibrs
 
 fibgo: src/fib.go
 	go build -o fibgo src/fib.go
@@ -38,5 +38,9 @@ fibml: src/fib.ml
 	ocamlopt -o fibml src/fib.ml
 	rm -f src/{fib.cmi,fib.cmx,fib.o}
 
+fibada: src/fib.adb
+	gnatmake -O3 -o fibada src/fib.adb
+	rm -f fib{.ali,.o}
+
 clean:
-	rm -f fibc fibgo fibrs "fib.class" "fib.beam" fibnim fibscm fibpas fibhs fibzig fibml
+	rm -f fibc fibgo fibrs "fib.class" "fib.beam" fibnim fibscm fibpas fibhs fibzig fibml fibada

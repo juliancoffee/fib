@@ -6,7 +6,6 @@ printf "\n C $1\n"
 printf "\n Rust $1\n"
 /usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" ./fibrs $1 2>&1
 
-
 printf "\n Nim $1\n"
 /usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" ./fibnim $1 2>&1
 
@@ -14,24 +13,27 @@ printf "\n Zig $1\n"
 /usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" ./fibzig $1 2>&1
 
 
-#printf "\nПесос гошка медленная\n"
-#printf "\n Julia $1\n"
-#/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" julia src/fib.jl $1 2>&1
+printf "\nПесос гошка медленная\n"
+printf "\n Julia $1\n"
+/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" julia src/fib.jl $1 2>&1
 
-#printf "\n Java $1\n"
-#/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" java fib $1 2>&1
+printf "\n Ada $1\n"
+/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" ./fibada $1 2>&1
 
-#printf "\n Ocaml $1\n"
-#/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" ./fibml $1 2>&1
+printf "\n Java $1\n"
+/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" java fib $1 2>&1
 
-#printf "\n Pascal $1\n"
-#/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" ./fibpas $1 2>&1
+printf "\n Ocaml $1\n"
+/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" ./fibml $1 2>&1
 
-#printf "\n Haskell $1\n"
-#/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" ./fibhs $1 2>&1
+printf "\n Pascal $1\n"
+/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" ./fibpas $1 2>&1
 
-#printf "\n Go $1\n"
-#/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" ./fibgo $1 2>&1
+printf "\n Haskell $1\n"
+/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" ./fibhs $1 2>&1
+
+printf "\n Go $1\n"
+/usr/bin/time -f"Time = %e\nUser = %U\nSystem = %S\nSize = %M (kb)" ./fibgo $1 2>&1
 
 
 #printf "\nYou can\n"
