@@ -21,6 +21,10 @@
 !*.erl
 !*.ml
 !*.adb
+!*.pl
+!*.awk
+!*.bash
+!*.fish
 
 #unignore gitignore, gitattributes, makefile, script to run
 !.gitignore
