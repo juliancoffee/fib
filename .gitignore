@@ -1,7 +1,8 @@
 #ignore all
 *
-#unignore fir
+#unignore dir, except for build
 !*/
+build/
 
 #unignore go, c, python, rust, julia, javascript, java, nim, scheme, pascal, v, zig code, erlang
 !*.go
@@ -31,4 +32,3 @@
 !.gitattributes
 !makefile
 !run.sh
-
