@@ -70,8 +70,8 @@ def dot(a, b):
 
 
 def main():
-    n = int(sys.argv[1])
-    print("res = {}".format(fib(n)))
+    num = int(sys.argv[1])
+    print("res = {}".format(fib(num)))
 
 if __name__ == "__main__":
     main()
