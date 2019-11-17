@@ -1,6 +1,8 @@
 CC = gcc
 
-all: fib.c
+all: fib
+
+fib: fib.c
 ifeq ($(CC), clang)
 	clang fib.c -O3 -o fib
 else
@@ -8,4 +10,4 @@ else
 endif
 
 clean:
-	rm fib
+	rm -f fib

@@ -11,5 +11,5 @@ endif
 	rm -f fib.hi fib.o
 
 clean:
-	rm fib
+	rm -f fib
 

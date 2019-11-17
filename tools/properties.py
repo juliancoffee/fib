@@ -4,7 +4,6 @@ Work with properties.txt
 from typing import Dict, List
 from dataclasses import dataclass
 
-
 @dataclass
 class Property:
     '''Property struct with name and values

@@ -4,7 +4,7 @@ fib () {
         echo 1
         return
     fi
-    + $(fib $(- $1 1)) $(fib $(- $1 2))
+    echo $(($(fib $(($1-1)))+$(fib $(($1-2)))))
 }
 
 fib $1

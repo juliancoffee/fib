@@ -4,4 +4,4 @@ fib: fib.cr
 	crystal build fib.cr --release
 
 clean:
-	rm fib
+	rm -f fib
