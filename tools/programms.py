@@ -7,7 +7,7 @@ from typing import Tuple, Dict, List
 from .properties import get_props
 
 
-def get_progs(path: str) -> List:
+def get_progs(path: str) -> List[Tuple[str, Dict]]:
     ''' Get list of tuples of path to programs and properties
     '''
     progs: List[Tuple[str, Dict]] = []
@@ -45,15 +45,15 @@ def clean(path: str):
     subprocess.run(cmd, cwd=path, check=True)
 
 
-def run(path, arg: int, shell="bash", interpreter=""):
+def run(path: str, arg: str, shell="bash", interpreter=""):
     '''Run program with given arguments
 
     Default shell is bash, but you can put another argument
     '''
-    if arg < 1:
+    if int(arg) < 1:
         print("Arguments must be greater than 0")
         return
-    cmd = [shell, "run.sh", str(arg)]
+    cmd = [shell, "run.sh", arg]
     if interpreter:
         cmd += ["-t", interpreter]
     subprocess.run(cmd, cwd=path, check=True)

@@ -3,7 +3,7 @@
 #unignore dir, except for build
 
 #unignore src dir
-!src/
+!src/*.*
 !tools/*.py
 
 #unignore gitignore, gitattributes, makefile, script to run
