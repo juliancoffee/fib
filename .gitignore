@@ -1,34 +1,12 @@
 #ignore all
 *
 #unignore dir, except for build
-!*/
-build/
 
-#unignore go, c, python, rust, julia, javascript, java, nim, scheme, pascal, v, zig code, erlang
-!*.go
-!*.c
-!*.py
-!*.rs
-!*.jl
-!*.js
-!*.java
-!*.nim
-!*.scm
-!*.pas
-!*.hs
-!*.clj
-!*.v
-!*.zig
-!*.erl
-!*.ml
-!*.adb
-!*.pl
-!*.awk
-!*.bash
-!*.fish
+#unignore src dir
+!src/
+!tools/*.py
 
 #unignore gitignore, gitattributes, makefile, script to run
 !.gitignore
 !.gitattributes
-!makefile
 !run.sh

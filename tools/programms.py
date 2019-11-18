@@ -3,14 +3,14 @@
 import os
 import subprocess
 
-from typing import Tuple
+from typing import Tuple, Dict, List
 from .properties import get_props
 
 
-def get_progs(path: str) -> Tuple:
-    ''' Get tuple of path to programs and properties
+def get_progs(path: str) -> List:
+    ''' Get list of tuples of path to programs and properties
     '''
-    progs = []
+    progs: List[Tuple[str, Dict]] = []
     for directory in filter(lambda f: not (f == "properties.txt"),
                             os.listdir(path)):
         dir_path = f"{path}/{directory}"
@@ -21,7 +21,7 @@ def get_progs(path: str) -> Tuple:
             else:
                 progs.append((dir_path, props))
         else:
-            progs.append((dir_path, None))
+            progs.append((dir_path, {}))
     return progs
 
 
@@ -44,10 +44,16 @@ def clean(path: str):
     cmd = ["make", "clean"]
     subprocess.run(cmd, cwd=path, check=True)
 
-def run(path, arg: int, shell="bash"):
+
+def run(path, arg: int, shell="bash", interpreter=""):
     '''Run program with given arguments
 
     Default shell is bash, but you can put another argument
     '''
+    if arg < 1:
+        print("Arguments must be greater than 0")
+        return
     cmd = [shell, "run.sh", str(arg)]
+    if interpreter:
+        cmd += ["-t", interpreter]
     subprocess.run(cmd, cwd=path, check=True)

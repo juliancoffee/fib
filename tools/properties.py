@@ -4,6 +4,7 @@ Work with properties.txt
 from typing import Dict, List
 from dataclasses import dataclass
 
+
 @dataclass
 class Property:
     '''Property struct with name and values
@@ -12,11 +13,11 @@ class Property:
     values: list
 
 
-def get_prop(line: str) -> Dict[str, List]:
+def get_prop(line: str) -> Property:
     '''Parse property from given line
     '''
     prop_line: List = list(map(lambda s: s.strip(), line.split("=")))
-    values: map = map(lambda s: s.strip(), prop_line[1].split(","))
+    values: List = list(map(lambda s: s.strip(), prop_line[1].split(",")))
     name: str = prop_line[0]
 
     return Property(
