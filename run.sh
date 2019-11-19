@@ -1,1 +1,1 @@
-python -m tools $1
+python3 -m tools $1

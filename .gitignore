@@ -1,12 +1,14 @@
 #ignore all
 *
-#unignore dir, except for build
+!makefile
 
 #unignore src dir
-!src/*.*
+!*/
+lib
+!src/**/*.*
 !tools/*.py
 
-#unignore gitignore, gitattributes, makefile, script to run
+#unignore gitignore script to run
 !.gitignore
-!.gitattributes
+!LICENSE
 !run.sh

@@ -25,12 +25,24 @@ def get_progs(path: str) -> List[Tuple[str, Dict]]:
     return progs
 
 
-def make(path: str, compiler=""):
+def checked(path: str, reason: str, optional="", shell="bash"):
+    cmd: List[str] = [shell, "deps.sh", reason]
+    if optional:
+        cmd += ["-t", optional]
+    if subprocess.run(cmd, cwd=path, capture_output=True).returncode == 1:
+        return False
+    return True
+
+
+def make(path: str, compiler="", shell="bash"):
     '''Make programm by makefile in given directory
     '''
     if "makefile" not in os.listdir(path):
         return
     cmd = ["make"]
+    if not checked(path, reason="compile", optional=compiler, shell=shell):
+        print("Dependencies not installed")
+        return
     if compiler:
         cmd.append(f"CC={compiler}")
     subprocess.run(cmd, cwd=path, check=True)
@@ -52,6 +64,9 @@ def run(path: str, arg: str, shell="bash", interpreter=""):
     '''
     if int(arg) < 1:
         print("Arguments must be greater than 0")
+        return
+    if not checked(path, reason="run", optional=interpreter, shell=shell):
+        print("Dependencies not installed")
         return
     cmd = [shell, "run.sh", arg]
     if interpreter:
