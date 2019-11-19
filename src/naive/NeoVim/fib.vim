@@ -5,8 +5,8 @@ function! Fib(n)
 	return Fib(a:n-1) + Fib(a:n-2)
 endfunction
 
-let n = readfile('/dev/stdin')[0]
+let n = readfile('/dev/fd/0')[0]
 let result = Fib(n)
 
-call writefile([result], '/dev/stdout')
+call writefile([result], '/dev/fd/1')
 quit
