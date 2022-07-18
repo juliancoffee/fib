@@ -10,4 +10,4 @@ do
     shift
 done
 
-"$interpreter" fib.lua "$n"
+time "$interpreter" fib.lua "$n"

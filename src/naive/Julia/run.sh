@@ -1,1 +1,1 @@
-julia fib.jl $1
+time julia fib.jl "$1"

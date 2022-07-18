@@ -2,7 +2,7 @@ CC = native
 
 all: fib
 
-fib:
+fib: fib.hs
 ifeq ($(CC), llvm)
 	ghc -O2 -fllvm fib.hs
 else

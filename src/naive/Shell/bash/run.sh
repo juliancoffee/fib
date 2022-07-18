@@ -1,1 +1,1 @@
-bash fib.bash $1
+time bash fib.bash "$1"

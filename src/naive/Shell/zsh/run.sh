@@ -1,1 +1,1 @@
-zsh fib.zsh $1
+time zsh fib.zsh "$1"

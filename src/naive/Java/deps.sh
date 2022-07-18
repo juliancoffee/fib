@@ -8,7 +8,7 @@ do
     shift
 done
 
-if [ reason == "compile" ]
+if [ "$reason" == "compile" ]
 then 
     which javac
 else

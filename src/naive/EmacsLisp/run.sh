@@ -1,1 +1,1 @@
-emacs -Q --script fib.el $1
+time emacs -Q --script fib.el "$1"

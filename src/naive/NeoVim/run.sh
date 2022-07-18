@@ -1,1 +1,1 @@
-echo $1 | nvim --headless -S fib.vim
+echo "$1" | time -p nvim --headless -S fib.vim

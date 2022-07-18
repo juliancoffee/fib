@@ -1,1 +1,1 @@
-node fib.js $1
+time node fib.js "$1"

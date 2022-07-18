@@ -1,1 +1,1 @@
-fish fib.fish $1
+time fish fib.fish "$1"

@@ -10,4 +10,4 @@ do
     shift
 done
 
-"$interpreter" fib.py "$n"
+time "$interpreter" fib.py "$n"

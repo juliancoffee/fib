@@ -1,1 +1,1 @@
-python fib.py $1
+time python fib.py "$1"

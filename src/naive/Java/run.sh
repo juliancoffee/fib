@@ -1,4 +1,4 @@
 if [ -f "fib.class" ]
 then
-    java fib $1
+    time java fib "$1"
 fi

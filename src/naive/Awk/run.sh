@@ -1,1 +1,1 @@
-echo $1 | awk -OE fib.awk
+echo "$1" | time -p awk -OE fib.awk

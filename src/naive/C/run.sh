@@ -1,4 +1,4 @@
 if [ -f "fib" ]
 then
-    ./fib $1
+    time -p ./fib "$1"
 fi

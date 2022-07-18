@@ -1,5 +1,5 @@
 (defn fib [n]
-  (if (< n 3) 
+  (if (< n 3)
     1
     (+
       (fib (- n 1))

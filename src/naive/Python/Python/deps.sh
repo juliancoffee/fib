@@ -7,4 +7,4 @@ do
     shift
 done
 
-which $interpreter
+which "$interpreter"

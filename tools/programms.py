@@ -37,6 +37,7 @@ def checked(path: str, reason: str, optional="", shell="bash"):
 def make(path: str, compiler="", shell="bash"):
     '''Make programm by makefile in given directory
     '''
+    print("> ", path)
     if "makefile" not in os.listdir(path):
         return
     cmd = ["make"]
@@ -62,6 +63,7 @@ def run(path: str, arg: str, shell="bash", interpreter=""):
 
     Default shell is bash, but you can put another argument
     '''
+    print("> ", path)
     if int(arg) < 1:
         print("Arguments must be greater than 0")
         return

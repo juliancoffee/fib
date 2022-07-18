@@ -1,1 +1,1 @@
-clojure fib.clj $1
+clojure fib.clj "$1"

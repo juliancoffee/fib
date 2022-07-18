@@ -1,1 +1,1 @@
-perl fib.pl $1
+time perl fib.pl "$1"

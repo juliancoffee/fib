@@ -1,9 +1,14 @@
-(defn fib [n] 
-  (defn fib_tail [n _second _first]
-    (if (< n 3)
-      (+ _second _first)
-      (recur (- n 1) _first (+ _second _first))))
-  (fib_tail n (bigint 0) (bigint 1)))
+(defn fib 
+  ([n] 
+   (fib n (bigint 0) (bigint 1)))
+  ([n prev curr]
+   (if (< n 3)
+     (+ prev curr)
+     (recur (- n 1) curr (+ prev curr)))))
 
-(println "res = "
-         (fib (read-string (first (*command-line-args*)))))
+(let [
+      cmd-arg (first *command-line-args*)
+      number (read-string cmd-arg)
+      result (str "res = " (fib number))
+      ]
+  (println result)) 
